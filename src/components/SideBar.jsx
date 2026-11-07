@@ -10,16 +10,16 @@ const SideNavBar = () => {
             <div className='flex flex-col justify-between bg-teal-600 text-white w-fit h-screen px-3 py-5'>
                 <div>
                     <ul className="flex flex-col justify-center items-center">
-                        <li className="w-8 h-8 flex justify-center items-center"><LuCalendar1 /></li>
-                        <li className="w-8 h-8 flex justify-center items-center"><LuChartArea /></li>
-                        <li className="w-8 h-8 flex justify-center items-center"><LuBell /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuCalendar1 /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuChartArea /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuBell /></li>
                     </ul>
                 </div>
 
                 <div>
                     <ul className="flex flex-col justify-center items-center">
-                        <li className="w-8 h-8 flex justify-center items-center"><LuSettings /></li>
-                        <li className="w-8 h-8 flex justify-center items-center"><LuUserRound /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuSettings /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuUserRound /></li>
                     </ul>
                 </div>
 

@@ -7,19 +7,19 @@ import { LuSettings } from "react-icons/lu";
 const SideNavBar = () => {
     return (
         <div>
-            <div className='flex flex-col justify-between bg-teal-600 text-white w-fit h-screen px-3 py-5'>
+            <div className='flex flex-col justify-between bg-teal-600 border-r text-white w-fit h-screen px-3 py-5 select-none'>
                 <div>
                     <ul className="flex flex-col justify-center items-center">
-                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuCalendar1 /></li>
-                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuChartArea /></li>
-                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuBell /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2 rounded-xl bg-white/15 text-white shadow-xs cursor-pointer transition-all"><LuCalendar1 /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2 rounded-xl hover:bg-white/10 hover:text-white cursor-pointer transition-all"><LuChartArea /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2 rounded-xl hover:bg-white/10 hover:text-white cursor-pointer transition-all"><LuBell /></li>
                     </ul>
                 </div>
 
                 <div>
                     <ul className="flex flex-col justify-center items-center">
-                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuSettings /></li>
-                        <li className="w-8 h-8 flex justify-center items-center my-2"><LuUserRound /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2 rounded-xl hover:bg-white/10 hover:text-white cursor-pointer transition-all"><LuSettings /></li>
+                        <li className="w-8 h-8 flex justify-center items-center my-2 rounded-xl hover:bg-white/10 hover:text-white cursor-pointer transition-all"><LuUserRound /></li>
                     </ul>
                 </div>
 

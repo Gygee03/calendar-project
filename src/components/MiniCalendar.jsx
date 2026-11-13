@@ -60,29 +60,29 @@ const MiniCalenDar = () => {
 
     return (
         <div>
-            <div className="bg-slate-50 w-2xs max-w-sm py-5 px-3">
+            <div className="p-5">
                 {/* Header */}
                 <div className="flex justify-between items-center">
                     {/* Month and Years */}
-                    <b className="text-lg font-semibold text-teal-700">
+                    <b className="text-sm font-semibold text-slate-800 tracking-tight">
                         {currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
                     </b>
                     {/* Prev and Next Icon */}
-                    <div className="flex text-teal-700 items-center">
-                        <button onClick={handlePrevMonth}>
-                            <LuChevronLeft />
+                    <div className="flex text-teal-700 items-center gap-1">
+                        <button onClick={handlePrevMonth} className="p-1.5 rounded-lg border border-slate-200/80 text-slate-500 hover:text-teal-700 hover:bg-slate-50 transition-colors cursor-pointer">
+                            <LuChevronLeft className="w-3.5 h-3.5" />
                         </button>
-                        <button onClick={handleNextMonth}>
-                            <LuChevronRight />
+                        <button onClick={handleNextMonth} className="p-1.5 rounded-lg border border-slate-200/80 text-slate-500 hover:text-teal-700 hover:bg-slate-50 transition-colors cursor-pointer">
+                            <LuChevronRight className="w-3.5 h-3.5" />
                         </button>
                     </div>
                 </div>
 
                 {/* Day */}
                 <div className="mt-5 mb-3">
-                    <div className="grid grid-cols-7 justify-center place-items-center">
+                    <div className="grid grid-cols-7 place-items-center mb-2">
                         {daysOfWeek.map((day, idx) => (
-                            <span key={idx} className="text-sm font-semibold text-teal-700">
+                            <span key={idx} className="text-[11px] font-medium text-slate-400">
                                 {day}
                             </span>
                         ))}
@@ -90,18 +90,18 @@ const MiniCalenDar = () => {
                 </div>
 
                 {/* Date */}
-                <div className="grid grid-cols-7 place-items-center">
+                <div className="grid grid-cols-7 gap-y-1 place-items-center">
                     {calendarCells.map((item, idx) => {
                         const isSelected = isSameDay(item.date, selectedDate);
                         const isCurrent = item.isCurrentMonth;
 
-                        let buttonClass = 'bg-transparent text-teal-600';
+                        let buttonClass = 'text-slate-700 hover:bg-teal-50 hover:text-teal-700 cursor-pointer';
 
                         if (!isCurrent) {
-                            buttonClass = 'text-slate-300 hover:bg-transparent cursor-default';
+                            buttonClass = 'text-slate-300 cursor-default';
                         }
                         else if (isSelected) {
-                            buttonClass = 'bg-teal-600 text-white font-medium shadow-xs shadow-teal-200 hover:bg-teal-700';
+                            buttonClass = 'bg-teal-600 text-white font-medium shadow-xs hover:bg-teal-700 cursor-pointer';
                         }
 
                         return (
@@ -110,7 +110,7 @@ const MiniCalenDar = () => {
                                     type="button"
                                     disabled={!isCurrent}
                                     onClick={() => setSelectedDate(item.date)}
-                                    className={`w-10 h-10 flex items-center justify-center rounded-full text-base transition-colors ${buttonClass}`}
+                                    className={`w-8 h-8 flex items-center justify-center rounded-full text-xs transition-all ${buttonClass}`}
                                 >
                                     {item.day}
                                 </button>

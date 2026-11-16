@@ -57,38 +57,36 @@ const MiniCalendar = () => {
     const handleNextMonth = () => setCurrentDate(new Date(years, month + 1, 1));
 
     return (
+        /* สไตล์ MUI Paper Component สำหรับ Mini Calendar */
         <div className="p-4 bg-white select-none">
-            {/* Header */}
             <div className="flex justify-between items-center mb-3">
-                <span className="text-xs font-semibold text-slate-800 tracking-tight">
+                <span className="text-xs font-bold text-slate-900 tracking-tight">
                     {currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
                 </span>
                 <div className="flex items-center gap-1">
                     <button 
                         onClick={handlePrevMonth} 
-                        className="p-1 rounded-md border border-slate-200 text-slate-500 hover:text-teal-700 hover:bg-slate-50 transition-colors cursor-pointer"
+                        className="p-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-teal-700 hover:bg-slate-100 transition-colors cursor-pointer"
                     >
                         <LuChevronLeft className="w-3.5 h-3.5" />
                     </button>
                     <button 
                         onClick={handleNextMonth} 
-                        className="p-1 rounded-md border border-slate-200 text-slate-500 hover:text-teal-700 hover:bg-slate-50 transition-colors cursor-pointer"
+                        className="p-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-teal-700 hover:bg-slate-100 transition-colors cursor-pointer"
                     >
                         <LuChevronRight className="w-3.5 h-3.5" />
                     </button>
                 </div>
             </div>
 
-            {/* Days of Week */}
             <div className="grid grid-cols-7 mb-1 text-center">
                 {daysOfWeek.map((day, idx) => (
-                    <span key={idx} className="text-[10px] font-semibold text-slate-400 uppercase">
+                    <span key={idx} className="text-[10px] font-bold text-slate-400 uppercase">
                         {day}
                     </span>
                 ))}
             </div>
 
-            {/* Date Cells */}
             <div className="grid grid-cols-7 gap-y-1 place-items-center">
                 {calendarCells.map((item, idx) => {
                     const isSelected = isSameDay(item.date, selectedDate);

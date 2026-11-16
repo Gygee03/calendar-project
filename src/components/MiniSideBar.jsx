@@ -1,5 +1,5 @@
-import MiniCalendar from "./MiniCalendar_3";
-import TodoList from "./TodoList_3";
+import MiniCalendar from "./MiniCalendar";
+import TodoList from "./TodoList";
 
 const MiniSideBar = () => {
     return (

@@ -1,4 +1,5 @@
 import './App.css'
+import FullCalendar from './components/FullCalendar'
 import MiniSideBar from './components/MiniSideBar'
 import SideNavBar from './components/SideBar'
 
@@ -8,6 +9,7 @@ function App() {
       <div className='flex'>
         <SideNavBar />
         <MiniSideBar />
+        <FullCalendar />
       </div>
     </div>
   )
